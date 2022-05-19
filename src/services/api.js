@@ -7,6 +7,12 @@ const getProducts = async () => {
     return response.data;
 }
 
+const getProductDetail = async (productId) => {
+    const response = await axios.get(`/products/${productId}`);
+    return response.data;
+}
+
 export {
     getProducts,
+    getProductDetail,
 }
